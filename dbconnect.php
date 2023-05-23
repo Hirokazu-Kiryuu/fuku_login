@@ -4,6 +4,8 @@ require_once './env.php';
 #ローカル環境でエラーログ見なくて良くなる
 ini_set('display_errors',true);
 
+echo "プッシュ用コード";//消す
+
 function connect()
 {
 #読み込んだ定数を変数に代入
