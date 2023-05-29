@@ -27,9 +27,7 @@ if($password !== $password_conf) {
 //エラー配列の中身が0ならば
 if (count($err) === 0) {
   //ユーザーを登録する処理
-  echo "hoge";
 }
-var_dump($err);
 
 ?>
 
@@ -42,21 +40,18 @@ var_dump($err);
   <title>ユーザー登録完了画面</title>
 </head>
 <body>
-<!-- $errの中身が1つ以上存在したら -->
-  <?php if(count($err) > 0) : ?>
-<!-- $errの中身をforeachで処理 -->
-    <?php foreach($err as $e) : ?>
-<!-- $eを吐き出す -->
-      <p><?php echo $e ?></p>
-    <?php endforeach;?>
-<!-- $errの中身が0なら -->
-  <?php else : ?>
-    <p>ユーザー登録が完了しました。</p>
-  <? endif;?>
-
-
-  
+  <!-- $errの中身が1つ以上存在したら -->
+  <?php if(count($err) > 0):?>
+    <!-- $errの配列を出す -->
+    <?php foreach($err as $e):?>
+      <p><?php echo $e?></p>
+    <?php endforeach?>
+  <!-- $errの中身が空なら -->
+  <?php else :?>
+    <p>ユーザー登録が完了しました</p>
+  <?php endif?>
   <a href="./signup_form.php">戻る</a>
+
   
 </body>
 </html>
